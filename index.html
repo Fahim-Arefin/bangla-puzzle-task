@@ -15,6 +15,7 @@
 
 <body>
     <!-- navbar -->
+    <div class="bg-[#fe5442] h-[2px]"></div>
     <nav class="bg-[#f9f5f1] flex items-center justify-center space-x-56 py-4">
         <ul class="flex text-[#898481] items-center space-x-4 font-bold tracking-wider text-sm">
             <div class="flex items-end">
@@ -42,8 +43,9 @@
                 rounded-[3px]">0
                 </div>
             </div>
-            <div class="bg-[#fe5442] px-10 py-2.5  text-white font-bold text-xs rounded-md">ORDER <span
-                    class="ml-0.5">NOW</span>
+            <div
+                class="bg-[#fe5442] px-9 py-2.5  text-white font-bold text-xs rounded-md hover:cursor-pointer hover:bg-[#e93b28] ">
+                ORDER <span class="ml-0.5">NOW</span>
             </div>
         </div>
     </nav>
@@ -61,13 +63,14 @@
         </div>
         <div class="text-[#6d6d6d] font-bold text-lg">
             <span>Find everything from our big Big Mouth Burgers</span>
-            <span class="text-2xl absolute">&#174;</span>
-            <span class="ml-3">,</span>
+            <span class="text-4xl absolute">&#174;</span>
+            <span class="ml-4">,</span>
             <span>Our always sizzling,</span>
             <span>Full-on fajitas and our famous Chicken Crispers</span>
-            <span class="text-2xl absolute">&#174;</span>
+            <span class="text-4xl absolute">&#174;</span>
         </div>
     </section>
+    <!-- Menu -->
     <menu class="flex justify-end font-semibold w-[57%] mx-auto mt-10">
         <div class="border-2 font-medium text-lg px-4 py-1.5 flex space-x-2 items-center ">
             <div class="text-[#707074] font-bold">Menu</div>
@@ -77,6 +80,74 @@
             </div>
         </div>
     </menu>
+    <!-- Cards -->
+    <section class="grid grid-cols-4 w-[62%] mx-auto mt-24 gap-x-4">
+        <!-- item1 -->
+        <div class="bg-[#f0f2f3] col-span-1 p-4 space-y-4 rounded-md relative">
+            <div class="h-[170px]">
+                <img class="w-full h-full" src="./assets/chicken.jpg" alt="">
+            </div>
+            <div class=" font-bold">
+                <div class="text-[#363638] text-lg">Chicken</div>
+                <div class="text-xs text-[#434449]">69$/each</div>
+            </div>
+            <div class="text-sm font-medium tracking-wide text-[#8f9092]">
+                Chicken fajitas served with rice and beans, tortillas , guacamole salsa and sour cream chicken fajitas
+                served wi...
+            </div>
+            <div class="flex flex-col space-y-2 font-medium">
+                <button
+                    class="py-1 bg-[#f9664f] text-white rounded-md hover:bg-[#e93b28] transition-all duration-150">Add
+                    To Card</button>
+                <button class="py-0.5 border-2 border-[#f9664f] text-[#f9664f] rounded-md">Customize</button>
+            </div>
+            <div class="bg-[#e93b28] px-[18px] py-2 rounded-2xl text-white text-xs font-semibold w-fit
+            absolute -top-7 -left-7 -rotate-45">NEW</div>
+        </div>
+        <!-- item2 -->
+        <div class="bg-[#f0f2f3] col-span-1 p-4 space-y-4 rounded-md">
+            <div class="h-[170px]">
+                <img class="w-full h-full" src="./assets/chicken.jpg" alt="">
+            </div>
+            <div class=" font-bold">
+                <div class="text-[#363638] text-lg">Fajitus</div>
+                <div class="text-xs text-[#434449]">169$/each</div>
+            </div>
+            <div class="text-sm font-medium tracking-wide text-[#8f9092]">
+                Chicken fajitas served with rice and beans, tortillas , guacamole salsa and sour cream chicken fajitas
+                served wi...
+            </div>
+            <div class="flex flex-col space-y-2 font-medium">
+                <button
+                    class="py-1 bg-[#f9664f] text-white rounded-md hover:bg-[#e93b28] transition-all duration-150">Add
+                    To Card</button>
+                <button class="py-0.5 border-2 border-[#f9664f] text-[#f9664f] rounded-md">Customize</button>
+            </div>
+        </div>
+        <!-- item3 -->
+        <div class="bg-[#f0f2f3] col-span-1 p-4 space-y-4 rounded-md relative">
+            <div class="h-[170px]">
+                <img class="w-full h-full" src="./assets/chicken.jpg" alt="">
+            </div>
+            <div class=" font-bold">
+                <div class="text-[#363638] text-lg">Chicken Masala</div>
+                <div class="text-xs text-[#434449]">269$/each</div>
+            </div>
+            <div class="text-sm font-medium tracking-wide text-[#8f9092]">
+                Chicken fajitas served with rice and beans, tortillas , guacamole salsa and sour cream chicken fajitas
+                served wi...
+            </div>
+            <div class="flex flex-col space-y-2 font-medium">
+                <button
+                    class="py-1 bg-[#f9664f] text-white rounded-md hover:bg-[#e93b28] transition-all duration-150">Add
+                    To Card</button>
+                <button class="py-0.5 border-2 border-[#f9664f] text-[#f9664f] rounded-md">Customize</button>
+            </div>
+            <div class="bg-[#e93b28] px-[18px] py-2 rounded-2xl text-white text-xs font-semibold w-fit
+            absolute -top-7 -left-7 -rotate-45">NEW</div>
+        </div>
+
+    </section>
     <script src="./js/index.js"></script>
 </body>
 
