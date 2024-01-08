@@ -4,13 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <title>Bangla Puzzle Task</title>
+    <link rel="stylesheet" href="./style/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <h1 class="">Home</h1>
-    <script src="js/index.js"></script>
+    <nav class="bg-[#f9f5f1] flex items-center justify-center space-x-56 py-4">
+        <ul class="flex text-[#898481] items-center space-x-4 font-bold tracking-wider text-sm">
+            <div class="flex items-end">
+                <div class="w-14 h-10">
+                    <img class="w-full h-full"
+                        src="https://img.icons8.com/external-smashingstocks-flat-smashing-stocks/66/external-Red-Chilli-food-smashingstocks-flat-smashing-stocks.png"
+                        alt="external-Red-Chilli-food-smashingstocks-flat-smashing-stocks" />
+                </div>
+                <div class="w-7 h-8 -ml-3">
+                    <img class="w-full h-full" width="100" height="100" src="./assets/logo.png" alt="s" />
+                </div>
+            </div>
+            <li>MENU</li>
+            <li>REWARDS</li>
+            <li>LOCATIONS</li>
+            <li>GIFT CARDS</li>
+            <li>LOG IN</li>
+        </ul>
+        <div class="flex items-center space-x-2">
+            <div class="w-9 h-9 relative cursor-pointer hover:scale-110 transition-all duration-150">
+                <img class="w-full h-full"
+                    src="https://img.icons8.com/external-creatype-glyph-colourcreatype/64/external-interface-essential-ui-v1-creatype-glyph-colourcreatype-20.png"
+                    alt="external-interface-essential-ui-v1-creatype-glyph-colourcreatype-20" />
+                <div class="absolute top-[2px] right-[2px] bg-[#fe5442] w-4 h-[19px] text-[10px] font-bold flex items-center justify-center text-white
+                rounded-[3px]">0
+                </div>
+            </div>
+            <div class="bg-[#fe5442] px-10 py-2.5  text-white font-bold text-xs rounded-md">ORDER <span
+                    class="ml-0.5">NOW</span>
+            </div>
+        </div>
+    </nav>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
