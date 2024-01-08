@@ -50,7 +50,7 @@
         </div>
     </nav>
     <!-- banner section -->
-    <section class="space-y-3 text-center">
+    <section class="space-y-4 text-center">
         <h1 class="text-4xl text-[#f9664f] font-bold">CHICKEN <span class="ml-2">CRISPER</span><span
                 class="text-6xl relative top-[19px]">&#174;</span><span class="ml-2">COMBOS</span>
         </h1>
@@ -81,7 +81,7 @@
         </div>
     </menu>
     <!-- Cards -->
-    <section class="grid grid-cols-4 w-[62%] mx-auto mt-24 gap-x-4">
+    <section class="grid grid-cols-4 w-[62%] mx-auto mt-16 gap-x-3 border-b-2 py-12">
         <!-- item1 -->
         <div class="bg-[#f0f2f3] col-span-1 p-4 space-y-4 rounded-md relative">
             <div class="h-[170px]">
@@ -147,6 +147,55 @@
             absolute -top-7 -left-7 -rotate-45">NEW</div>
         </div>
 
+    </section>
+
+    <!-- sidebar -->
+    <section class="w-[300px] h-screen bg-[#fd5442] absolute top-0 right-0">
+        <!-- header -->
+        <div class="bg-white text-[16px] font-medium h-12 flex justify-between items-center px-4 text-[#fc7b6f]">
+            <div class="flex space-x-2 items-center">
+                <div class="w-6 h-6 cursor-pointer hover:scale-110 transition-all duration-150">
+                    <img class="w-full h-full"
+                        src="https://img.icons8.com/external-creatype-glyph-colourcreatype/64/fe5241/external-interface-essential-ui-v1-creatype-glyph-colourcreatype-20.png"
+                        alt="external-interface-essential-ui-v1-creatype-glyph-colourcreatype-20" />
+
+                </div>
+                <div>2</div>
+                <div>Item</div>
+            </div>
+            <button class="border border-[#fc7b6f] px-1 rounded-lg">
+                Close
+            </button>
+        </div>
+        <!-- items container -->
+        <div class="p-3 space-y-4">
+            <!-- item -->
+            <div class="h-36 border-2 border-[#ffaf9f] grid grid-cols-6 p-[6px] rounded-md text-[#ffefe3] text-[16px] font-bold
+            gap-x-1 relative">
+                <div class="col-span-2 w-[90%] ">
+                    <img class="h-full w-full rounded-md" src="./assets/fajitus.jpg" alt="">
+                </div>
+                <div class="col-span-3 flex flex-col justify-center">
+                    <div>
+                        Chicken Masala
+                    </div>
+                    <div class="text-[10px] -mt-1">169$/each</div>
+                    <div class="flex text-[#939392] mt-4 items-center">
+                        <button class="bg-[#e3e7ee] w-6 h-8 flex justify-center items-center rounded-l-[4px] cursor-pointer
+                        hover:bg-[#c8ccd3] active:scale-105 transition-all duration-150">-</button>
+                        <div class="w-10 h-6 bg-[#fefefd] flex justify-center items-center">1</div>
+                        <button class="bg-[#e3e7ee] w-6 h-8 flex justify-center items-center rounded-r-[4px] cursor-pointer
+                        hover:bg-[#e3e7ee] active:scale-105 transition-all duration-150">+</button>
+                    </div>
+                </div>
+                <div class="col-span-1 flex items-end">220 <span class="scale-y-125">$</span></div>
+                <button class="w-6 h-6 bg-[#fffbfe] p-1 rounded-md absolute -top-2 -right-1 active:scale-105">
+                    <img class="h-full w-full  "
+                        src="https://img.icons8.com/material-rounded/24/fe5442/filled-trash.png" alt="filled-trash" />
+                </button>
+            </div>
+
+        </div>
     </section>
     <script src="./js/index.js"></script>
 </body>
