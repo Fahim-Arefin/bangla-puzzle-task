@@ -62,7 +62,7 @@ The Bangla Puzzle Task is a web application designed for displaying and managing
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Fahim-Arefin/bangla-puzzle-task.git>
+   git clone https://github.com/Fahim-Arefin/bangla-puzzle-task.git
    ```
 
 2. Change Directory and double click the `index.html` to open the applicaiton on the browser
