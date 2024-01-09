@@ -1,3 +1,23 @@
+function extractNumber(inputString) {
+  const numericPart = inputString.split("$");
+  return numericPart[0];
+}
+
+function calculateTotalPrice() {
+  const itemList = document.querySelectorAll(".itemList");
+  const currentPrice = document.querySelector("#calculated");
+  console.log("Total Price", itemList);
+  let sum = 0;
+  for (const item of itemList) {
+    const price = item.querySelector("#eachItemTotalPrice");
+    console.log("lol");
+    console.log(parseInt(currentPrice.innerText));
+    console.log(parseInt(price.innerText));
+    sum += parseInt(price.innerText);
+  }
+  currentPrice.innerText = sum;
+}
+
 function showSidebar() {
   const sidebar = document.getElementById("sidebar");
   sidebar.classList.remove("hidden");
@@ -43,17 +63,40 @@ function handleDelete(id) {
         btn.classList.add("bg-[#f9664f]", "hover:bg-[#e93b28]");
         btn.classList.remove("bg-[#5e6571]", "hover:bg-[#424958]");
         btn.removeAttribute("disabled", "false");
+        calculateTotalPrice();
       }
     });
   }
 }
 
 function handleIncrement(id) {
-  // const allFoods = document.querySelectorAll(".foods");
-  // const foodName = document.querySelectorAll(`#${id} #dishName`)[0];
   const quantity = document.querySelector(`#${id} .quantity div`);
-  const buttons = document.querySelectorAll(`#${id} button `);
-  console.log(quantity);
+  const eachTotalPrice = document.querySelector(`#${id} #eachItemTotalPrice`);
+  const originalPrice = document.querySelector(
+    `#${id} #originalPrice`
+  ).innerText;
+
+  const parsedPrice = parseInt(extractNumber(originalPrice));
+
+  quantity.innerText = parseInt(quantity.innerText) + 1;
+  eachTotalPrice.innerText = parseInt(eachTotalPrice.innerText) + parsedPrice;
+  calculateTotalPrice();
+}
+
+function handleDecrement(id) {
+  const quantity = document.querySelector(`#${id} .quantity div`);
+  const eachTotalPrice = document.querySelector(`#${id} #eachItemTotalPrice`);
+  const originalPrice = document.querySelector(
+    `#${id} #originalPrice`
+  ).innerText;
+
+  if (parseInt(quantity.innerText) === 1) {
+    return;
+  }
+  const parsedPrice = parseInt(extractNumber(originalPrice));
+  quantity.innerText = parseInt(quantity.innerText) - 1;
+  eachTotalPrice.innerText = parseInt(eachTotalPrice.innerText) - parsedPrice;
+  calculateTotalPrice();
 }
 
 function btnEvent(btn, item, itemPrice, totalItemInNav, totalItemInSideBar) {
@@ -82,16 +125,19 @@ function btnEvent(btn, item, itemPrice, totalItemInNav, totalItemInSideBar) {
         </div>
         <div class="col-span-3 flex flex-col justify-center">
             <div id="dishName">${dishName}</div>
-            <div class="text-[10px] -mt-1">${price}</div>
+            <div id="originalPrice" class="text-[10px] -mt-1">${price}</div>
             <div class="flex text-[#939392] mt-4 items-center quantity">
-                <button class="bg-[#e3e7ee] w-6 h-8 flex justify-center items-center rounded-l-[4px] cursor-pointer
+                <button onclick="handleDecrement('${item}Card')" class="bg-[#e3e7ee] w-6 h-8 flex justify-center items-center rounded-l-[4px] cursor-pointer
                 hover:bg-[#c8ccd3] active:scale-105 transition-all duration-150">-</button>
                 <div class="w-10 h-6 bg-[#fefefd] flex justify-center items-center">1</div>
                 <button onclick="handleIncrement('${item}Card')" class="bg-[#e3e7ee] w-6 h-8 flex justify-center items-center rounded-r-[4px] cursor-pointer
                 hover:bg-[#e3e7ee] active:scale-105 transition-all duration-150">+</button>
             </div>
         </div>
-        <div class="col-span-1 flex items-end">220 <span class="scale-y-125">$</span></div>
+        <div class="col-span-1 flex items-end text-[14px]"> <span id="eachItemTotalPrice">${extractNumber(
+          price
+        )}</span> 
+        <span class="scale-y-125">$</span></div>
         <button onclick="handleDelete('${item}Card')" class="w-6 h-6 bg-[#fffbfe] p-1 rounded-md absolute -top-2 -right-1 active:scale-105">
             <img class="h-full w-full  "
                 src="https://img.icons8.com/material-rounded/24/fe5442/filled-trash.png" alt="filled-trash" />
@@ -99,6 +145,7 @@ function btnEvent(btn, item, itemPrice, totalItemInNav, totalItemInSideBar) {
   
     </div>`;
     itemContainer.appendChild(itemDiv);
+    calculateTotalPrice();
   });
 }
 
@@ -111,7 +158,6 @@ const totalItemInNav = document.querySelectorAll(".totalItem")[0];
 const totalItemInSideBar = document.querySelectorAll(".totalItem")[1];
 
 // event handler func
-
 btnEvent(
   chickenAddBtn,
   "chicken",
