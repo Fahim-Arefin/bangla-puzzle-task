@@ -120,8 +120,14 @@ function btnEvent(btn, item, itemPrice, totalItemInNav, totalItemInSideBar) {
 
     itemDiv.innerHTML = ` <div id="${item}Card" class="itemList h-36 border-2 border-[#ffaf9f] grid grid-cols-6 p-[6px] rounded-md text-[#ffefe3] text-[16px] font-bold
     gap-x-1 relative">
-        <div class="col-span-2 w-[90%] ">
-            <img class="h-full w-full rounded-md" src="./assets/fajitus.jpg" alt="">
+        <div class="col-span-2 w-[90%] overflow-hidden">
+            <img class="h-full w-full rounded-md scale-150 " src="./assets/${
+              dishName === "Fajitus"
+                ? "fajitus"
+                : dishName === "Chicken"
+                ? "chicken"
+                : "chicken-masala"
+            }.jpg" alt="">
         </div>
         <div class="col-span-3 flex flex-col justify-center">
             <div id="dishName">${dishName}</div>
