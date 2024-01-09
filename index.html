@@ -35,11 +35,11 @@
             <li>LOG IN</li>
         </ul>
         <div class="flex items-center space-x-2">
-            <div class="w-9 h-9 relative cursor-pointer hover:scale-110 transition-all duration-150">
+            <div id="totalLock" class=" w-9 h-9 relative cursor-pointer hover:scale-110 transition-all duration-150">
                 <img class="w-full h-full"
                     src="https://img.icons8.com/external-creatype-glyph-colourcreatype/64/external-interface-essential-ui-v1-creatype-glyph-colourcreatype-20.png"
                     alt="external-interface-essential-ui-v1-creatype-glyph-colourcreatype-20" />
-                <div class="absolute top-[2px] right-[2px] bg-[#fe5442] w-4 h-[19px] text-[10px] font-bold flex items-center justify-center text-white
+                <div class="totalItem absolute top-[2px] right-[2px] bg-[#fe5442] w-4 h-[19px] text-[10px] font-bold flex items-center justify-center text-white
                 rounded-[3px]">0
                 </div>
             </div>
@@ -81,22 +81,22 @@
         </div>
     </menu>
     <!-- Cards -->
-    <section class="grid grid-cols-4 w-[62%] mx-auto mt-16 gap-x-3 border-b-2 py-12">
+    <section class="foodCard grid grid-cols-4 w-[62%] mx-auto mt-16 gap-x-3 border-b-2 py-12">
         <!-- item1 -->
-        <div class="bg-[#f0f2f3] col-span-1 p-4 space-y-4 rounded-md relative">
+        <div class="bg-[#f0f2f3] col-span-1 p-4 space-y-4 rounded-md relative foods">
             <div class="h-[170px]">
                 <img class="w-full h-full" src="./assets/chicken.jpg" alt="">
             </div>
             <div class=" font-bold">
-                <div class="text-[#363638] text-lg">Chicken</div>
-                <div class="text-xs text-[#434449]">69$/each</div>
+                <div id="chicken" class="foodName text-[#363638] text-lg ">Chicken</div>
+                <div id="chickenPrice" class="foodPrice text-xs text-[#434449] ">69$/each</div>
             </div>
             <div class="text-sm font-medium tracking-wide text-[#8f9092]">
                 Chicken fajitas served with rice and beans, tortillas , guacamole salsa and sour cream chicken fajitas
                 served wi...
             </div>
             <div class="flex flex-col space-y-2 font-medium">
-                <button
+                <button id="chickenBtn"
                     class="py-1 bg-[#f9664f] text-white rounded-md hover:bg-[#e93b28] transition-all duration-150">Add
                     To Card</button>
                 <button class="py-0.5 border-2 border-[#f9664f] text-[#f9664f] rounded-md">Customize</button>
@@ -105,40 +105,40 @@
             absolute -top-7 -left-7 -rotate-45">NEW</div>
         </div>
         <!-- item2 -->
-        <div class="bg-[#f0f2f3] col-span-1 p-4 space-y-4 rounded-md">
+        <div class="bg-[#f0f2f3] col-span-1 p-4 space-y-4 rounded-md foods">
             <div class="h-[170px]">
-                <img class="w-full h-full" src="./assets/chicken.jpg" alt="">
+                <img class="w-full h-full" src="./assets/fajitus.jpg" alt="">
             </div>
             <div class=" font-bold">
-                <div class="text-[#363638] text-lg">Fajitus</div>
-                <div class="text-xs text-[#434449]">169$/each</div>
+                <div id="fajitus" class="foodName text-[#363638] text-lg">Fajitus</div>
+                <div id="fajitusPrice" class="foodPrice text-xs text-[#434449]">169$/each</div>
             </div>
             <div class="text-sm font-medium tracking-wide text-[#8f9092]">
                 Chicken fajitas served with rice and beans, tortillas , guacamole salsa and sour cream chicken fajitas
                 served wi...
             </div>
             <div class="flex flex-col space-y-2 font-medium">
-                <button
+                <button id="fajitusBtn"
                     class="py-1 bg-[#f9664f] text-white rounded-md hover:bg-[#e93b28] transition-all duration-150">Add
                     To Card</button>
                 <button class="py-0.5 border-2 border-[#f9664f] text-[#f9664f] rounded-md">Customize</button>
             </div>
         </div>
         <!-- item3 -->
-        <div class="bg-[#f0f2f3] col-span-1 p-4 space-y-4 rounded-md relative">
+        <div class="bg-[#f0f2f3] col-span-1 p-4 space-y-4 rounded-md relative foods">
             <div class="h-[170px]">
-                <img class="w-full h-full" src="./assets/chicken.jpg" alt="">
+                <img class="w-full h-full" src="./assets/chicken-masala.jpg" alt="">
             </div>
             <div class=" font-bold">
-                <div class="text-[#363638] text-lg">Chicken Masala</div>
-                <div class="text-xs text-[#434449]">269$/each</div>
+                <div id="chickenMasala" class="foodName text-[#363638] text-lg">Chicken Masala</div>
+                <div id="chickenMasalaPrice" class="foodPrice text-xs text-[#434449]">269$/each</div>
             </div>
             <div class="text-sm font-medium tracking-wide text-[#8f9092]">
                 Chicken fajitas served with rice and beans, tortillas , guacamole salsa and sour cream chicken fajitas
                 served wi...
             </div>
             <div class="flex flex-col space-y-2 font-medium">
-                <button
+                <button id="chickenMasalaBtn"
                     class="py-1 bg-[#f9664f] text-white rounded-md hover:bg-[#e93b28] transition-all duration-150">Add
                     To Card</button>
                 <button class="py-0.5 border-2 border-[#f9664f] text-[#f9664f] rounded-md">Customize</button>
@@ -148,9 +148,9 @@
         </div>
 
     </section>
-
     <!-- sidebar -->
-    <section class="w-[300px] h-screen bg-[#fd5442] absolute top-0 right-0">
+    <section id="sidebar" class="hidden w-[300px] h-screen bg-[#fd5442] fixed top-0 right-0
+    transform translate-x-full transition-all duration-700 ease-out ">
         <!-- header -->
         <div class="bg-white text-[16px] font-medium h-12 flex justify-between items-center px-4 text-[#fc7b6f]">
             <div class="flex space-x-2 items-center">
@@ -160,17 +160,17 @@
                         alt="external-interface-essential-ui-v1-creatype-glyph-colourcreatype-20" />
 
                 </div>
-                <div>2</div>
+                <div class="totalItem">0</div>
                 <div>Item</div>
             </div>
-            <button class="border border-[#fc7b6f] px-1 rounded-lg">
+            <button id="close" class="border border-[#fc7b6f] px-1 rounded-lg">
                 Close
             </button>
         </div>
         <!-- items container -->
-        <div class="p-3 space-y-4">
+        <div class="itemContainer p-3 space-y-4">
             <!-- item -->
-            <div class="h-36 border-2 border-[#ffaf9f] grid grid-cols-6 p-[6px] rounded-md text-[#ffefe3] text-[16px] font-bold
+            <!-- <div class="h-36 border-2 border-[#ffaf9f] grid grid-cols-6 p-[6px] rounded-md text-[#ffefe3] text-[16px] font-bold
             gap-x-1 relative">
                 <div class="col-span-2 w-[90%] ">
                     <img class="h-full w-full rounded-md" src="./assets/fajitus.jpg" alt="">
@@ -194,8 +194,9 @@
                         src="https://img.icons8.com/material-rounded/24/fe5442/filled-trash.png" alt="filled-trash" />
                 </button>
 
-            </div>
+            </div> -->
         </div>
+        <!-- footer -->
         <div class="flex justify-center bg-white py-3 space-x-2 text-[#fc7b6f] font-bold
         absolute bottom-0 left-0 right-0 ">
             <div>Place Order</div>
