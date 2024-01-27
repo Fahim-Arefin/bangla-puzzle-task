@@ -114,8 +114,6 @@ function btnEvent(btn, item, itemPrice, totalItemInNav, totalItemInSideBar) {
     btn.classList.add("bg-[#5e6571]", "hover:bg-[#424958]");
 
     // add item
-    // add item
-    // add item
     const itemContainer = document.querySelector("#sidebar .itemContainer");
     console.log(itemContainer);
     const itemDiv = document.createElement("div");
