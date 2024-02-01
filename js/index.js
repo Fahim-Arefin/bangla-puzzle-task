@@ -112,7 +112,6 @@ function btnEvent(btn, item, itemPrice, totalItemInNav, totalItemInSideBar) {
     console.log(price);
     btn.classList.remove("bg-[#f9664f]", "hover:bg-[#e93b28]");
     btn.classList.add("bg-[#5e6571]", "hover:bg-[#424958]");
-    // asdas
     const itemContainer = document.querySelector("#sidebar .itemContainer");
     console.log(itemContainer);
     const itemDiv = document.createElement("div");
