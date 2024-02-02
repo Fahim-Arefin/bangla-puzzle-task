@@ -115,7 +115,7 @@ function btnEvent(btn, item, itemPrice, totalItemInNav, totalItemInSideBar) {
     const itemContainer = document.querySelector("#sidebar .itemContainer");
     console.log(itemContainer);
     const itemDiv = document.createElement("div");
-
+    // sadsad
     itemDiv.innerHTML = ` <div id="${item}Card" class="itemList h-36 border-2 border-[#ffaf9f] grid grid-cols-6 p-[6px] rounded-md text-[#ffefe3] text-[16px] font-bold
     gap-x-1 relative">
         <div class="col-span-2 w-[90%] overflow-hidden">
